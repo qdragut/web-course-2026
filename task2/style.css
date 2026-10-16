@@ -1,0 +1,299 @@
+/* --- ГЛОБАЛЬНЫЕ СТИЛИ (Mobile First) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Общий контейнер для центрирования контента */
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex; /* Flexbox для выравнивания текста внутри */
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* Требование touch-friendly (не менее 44px) */
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход */
+    text-decoration: none;
+}
+
+.btn--primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.02); /* Плавный переход для кнопки */
+}
+
+/* --- ШАПКА --- */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex; /* Flexbox для шапки */
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* Бургер-меню (визуальный) */
+.burger {
+    display: flex; /* Flexbox для линий бургера */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px; /* Увеличиваем область клика */
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #2c3e50;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Скрываем обычное меню на мобильных */
+.nav {
+    display: none;
+}
+
+/* --- ГЕРОЙ-СЕКЦИЯ --- */
+.hero {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.hero__container {
+    display: grid; /* CSS Grid для макро-разметки */
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero__title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.hero__text {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.hero__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- СЕКЦИЯ КАРТОЧЕК --- */
+.features {
+    padding: 60px 0;
+    background-color: #f4f7f6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.features__grid {
+    display: grid; /* CSS Grid для сетки карточек */
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex; /* Flexbox для содержимого карточки */
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card__icon {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.card__title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card__text {
+    color: #666;
+}
+
+/* --- ФОРМА ОБРАТНОЙ СВЯЗИ --- */
+.contact {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.contact__form {
+    display: flex; /* Flexbox для формы */
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-input {
+    min-height: 44px; /* Touch-friendly */
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* --- ФУТЕР --- */
+.footer {
+    padding: 30px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+/* =========================================
+   МЕДИАЗАПРОСЫ (Mobile First)
+   ========================================= */
+
+/* Планшет: от 768px до 1199px */
+@media (min-width: 768px) {
+    /* Показываем меню, скрываем бургер */
+    .burger {
+        display: none;
+    }
+
+    .nav {
+        display: flex; /* Flexbox для навигации */
+        gap: 30px;
+    }
+
+    .nav__link {
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .nav__link:hover {
+        color: #3498db;
+    }
+
+    /* Сетка карточек в 2 колонки */
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Форма в две колонки */
+    .contact__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group--full {
+        grid-column: span 2; /* Растягиваем на всю ширину */
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Десктоп: от 1200px */
+@media (min-width: 1200px) {
+    /* Сетка карточек в 4 колонки */
+    .features__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Герой-секция в две колонки */
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+}

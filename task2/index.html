@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг — Название проекта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">Logo</a>
+            
+            <!-- Бургер для мобильных (визуальный) -->
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Меню (на мобильных скрыто, на планшетах/десктопах flex) -->
+            <nav class="nav">
+                <a href="#features" class="nav__link">Услуги</a>
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Заголовок вашего продукта</h1>
+                    <p class="hero__text">Краткое описание того, что вы предлагаете. Это может быть услуга, товар или мероприятие.</p>
+                    <button class="btn btn--primary">Оставить заявку</button>
+                </div>
+                <div class="hero__image">
+                    <img src="hero.jpg" alt="Изображение продукта">
+                </div>
+            </div>
+        </section>
+
+        <!-- Карточки услуг/товаров -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Наши преимущества</h2>
+                <div class="features__grid">
+                    <!-- Карточка 1 -->
+                    <article class="card">
+                        <div class="card__icon">★</div>
+                        <h3 class="card__title">Качество</h3>
+                        <p class="card__text">Мы предоставляем только лучшие услуги на рынке.</p>
+                    </article>
+                    <!-- Карточка 2 -->
+                    <article class="card">
+                        <div class="card__icon">⚡</div>
+                        <h3 class="card__title">Скорость</h3>
+                        <p class="card__text">Выполняем заказы в кратчайшие сроки без потери качества.</p>
+                    </article>
+                    <!-- Карточка 3 -->
+                    <article class="card">
+                        <div class="card__icon">♥</div>
+                        <h3 class="card__title">Поддержка</h3>
+                        <p class="card__text">Наши специалисты всегда готовы помочь вам с выбором.</p>
+                    </article>
+                    <!-- Карточка 4 -->
+                    <article class="card">
+                        <div class="card__icon">✓</div>
+                        <h3 class="card__title">Гарантия</h3>
+                        <p class="card__text">Предоставляем официальную гарантию на все наши товары.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section class="contact" id="contacts">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <form class="contact__form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" id="name" class="form-input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group form-group--full">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" class="form-input form-textarea" placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary form-group--full">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2026 Название компании. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
